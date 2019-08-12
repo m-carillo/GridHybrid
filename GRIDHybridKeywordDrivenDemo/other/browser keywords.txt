@@ -1,0 +1,26 @@
+                                                     
+,--.                                                 
+|  |-. ,--.--. ,---. ,--.   ,--. ,---.  ,---. ,--.--.
+| .-. '|  .--'| .-. ||  |.'.|  |(  .-' | .-. :|  .--'
+| `-' ||  |   ' '-' '|   .'.   |.-'  `)\   --.|  |   
+ `---' `--'    `---' '--'   '--'`----'  `----'`--'   
+                                                     
+
+The following can be used when opening the browser
+
+NOTE: not case sensitive
+
+a. Mozilla Firefox
+	-Mozilla
+	-Firefox
+	-MozillaFirefox
+	
+b. Google Chrome
+	-Chrome
+	-GoogleChrome
+
+c. Internet Explorer
+	-IE
+	-InternetExplorer
+	-iexplorer
+

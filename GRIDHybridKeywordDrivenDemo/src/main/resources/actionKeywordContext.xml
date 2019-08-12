@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/jee 
+		http://www.springframework.org/schema/jee/spring-jee.xsd">
+
+	<!-- classes implementing ActionKeyword -->
+	<bean name="assertKeyword" class="com.ump.automate.test.service.impl.AssertKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+	</bean>
+
+	<bean name="assertMultipleKeyword"
+		class="com.ump.automate.test.service.impl.AssertMultipleKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+	</bean>
+
+	<bean name="assertUsingInputKeyword" class="com.ump.automate.test.service.impl.AssertUsingInputKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+	</bean>
+	
+	<bean name="basicOperatorKeyword"
+		class="com.ump.automate.test.service.impl.BasicOperatorKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+	</bean>
+	
+	<bean name="checkCompareTextMultipleSectionByCssSelectorKeyword"
+		class="com.ump.automate.test.service.impl.CheckCompareTextMultipleSectionByCssSelectorKeyword">
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="checkContainsTextMultipleSectionByCssSelectorKeyword"
+		class="com.ump.automate.test.service.impl.CheckContainsTextMultipleSectionByCssSelectorKeyword">
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="checkElementCompareCssClassKeyword"
+		class="com.ump.automate.test.service.impl.CheckElementCompareCssClassKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="checkElementContainsCssClassKeyword"
+		class="com.ump.automate.test.service.impl.CheckElementContainsCssClassKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="checkSelectOptionNotContainsValueKeyword"
+		class="com.ump.automate.test.service.impl.CheckSelectOptionNotContainsValueKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="checkSelectOptionsKeyword"
+		class="com.ump.automate.test.service.impl.CheckSelectOptionsKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="checkSelectValueKeyword"
+		class="com.ump.automate.test.service.impl.CheckSelectValueKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="clickKeyword" class="com.ump.automate.test.service.impl.ClickKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+	
+	<bean name="clickUntilElementPresentKeyword" class="com.ump.automate.test.service.impl.ClickUntilElementPresentKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+	
+	<bean name="clickUsingInputKeyword" class="com.ump.automate.test.service.impl.ClickUsingInputKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="closeBrowserKeyword"
+		class="com.ump.automate.test.service.impl.CloseBrowserKeyword">
+		<property name="contextHandler" ref="contextHandler" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="compareFromResultKeyword"
+		class="com.ump.automate.test.service.impl.CompareFromResultKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+	</bean>
+
+	<bean name="compareNumbersOnlyKeyword"
+		class="com.ump.automate.test.service.impl.CompareNumbersOnlyKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="comparePlaceholderTextKeyword"
+		class="com.ump.automate.test.service.impl.ComparePlaceholderTextKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="compareStoredValueKeyword"
+		class="com.ump.automate.test.service.impl.CompareStoredValueKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+	</bean>
+	
+	<bean name="compareTextKeyword" class="com.ump.automate.test.service.impl.CompareTextKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="containsTextKeyword"
+		class="com.ump.automate.test.service.impl.ContainsTextKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="countByCssSelectorKeyword"
+		class="com.ump.automate.test.service.impl.CountByCssSelectorKeyword">
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="countCompareTextByCssSelectorKeyword"
+		class="com.ump.automate.test.service.impl.CountCompareTextByCssSelectorKeyword">
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="countContainsTextByCssSelectorKeyword"
+		class="com.ump.automate.test.service.impl.CountContainsTextByCssSelectorKeyword">
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="datePickerKeyword"
+		class="com.ump.automate.test.service.impl.DatePickerKeyword">
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+	
+	<bean name="fieldNotNullKeyword"
+		class="com.ump.automate.test.service.impl.FieldNotNullKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="fileDownloadCheckKeyword" class="com.ump.automate.test.service.impl.FileDownloadCheckKeyword">
+		<property name="driverScript" ref="driverScript" />	
+		<property name="fileChecker" ref="fileChecker" />
+	</bean>
+	
+	<bean name="hoverKeyword" class="com.ump.automate.test.service.impl.HoverKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="inputFromStoredKeyword" class="com.ump.automate.test.service.impl.InputFromStoredKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+	
+	<bean name="inputKeyword" class="com.ump.automate.test.service.impl.InputKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="inputNumberOnlyKeyword"
+		class="com.ump.automate.test.service.impl.InputNumberOnlyKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="isAscendingKeyword" class="com.ump.automate.test.service.impl.IsAscendingKeyword">
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="isCheckedKeyword" class="com.ump.automate.test.service.impl.IsCheckedKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="isDateInBetweenKeyword"
+		class="com.ump.automate.test.service.impl.IsDateInBetweenKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="isDescendingKeyword"
+		class="com.ump.automate.test.service.impl.IsDescendingKeyword">
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="isElementDisabledKeyword"
+		class="com.ump.automate.test.service.impl.IsElementDisabledKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="isElementEnabledKeyword"
+		class="com.ump.automate.test.service.impl.IsElementEnabledKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="isElementReadOnlyKeyword"
+		class="com.ump.automate.test.service.impl.IsElementReadOnlyKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="isUncheckedKeyword" class="com.ump.automate.test.service.impl.IsUncheckedKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="jsClickKeyword" class="com.ump.automate.test.service.impl.JsClickKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+	
+	<bean name="navigateKeyword" class="com.ump.automate.test.service.impl.NavigateKeyword">
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="nonExistentKeyword" class="com.ump.automate.test.service.impl.NonExistentKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="nonExistentUsingInputKeyword" class="com.ump.automate.test.service.impl.NonExistentUsingInputKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+	
+	<bean name="openBrowserKeyword" class="com.ump.automate.test.service.impl.OpenBrowserKeyword">
+		<property name="driverScript" ref="driverScript" />
+		<property name="gridBrowser" ref="gridBrowser" />
+		<property name="localBrowser" ref="localBrowser" />
+		<property name="externalPropertiesResource" ref="externalPropertiesResource" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="selectFromDropdownCaseInsensitiveKeyword"
+		class="com.ump.automate.test.service.impl.SelectFromDropdownCaseInsensitiveKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="selectFromDropdownByIndexKeyword"
+		class="com.ump.automate.test.service.impl.SelectFromDropdownByIndexKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="selectFromDropdownByVisibleNumbersOnlyKeyword"
+		class="com.ump.automate.test.service.impl.SelectFromDropdownByVisibleNumbersOnlyKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+	<bean name="selectFromDropdownByVisibleTextKeyword"
+		class="com.ump.automate.test.service.impl.SelectFromDropdownByVisibleTextKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+	
+	<bean name="storeMultipleValuesKeyword"
+		class="com.ump.automate.test.service.impl.StoreMultipleValuesKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+	</bean>
+	
+	<bean name="storeValueKeyword"
+		class="com.ump.automate.test.service.impl.StoreValueKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+	</bean>
+
+	<bean name="submitKeyword" class="com.ump.automate.test.service.impl.SubmitKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+	
+	<bean name="switchWindowKeyword" class="com.ump.automate.test.service.impl.SwitchWindowKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+	</bean>
+
+	<bean name="textNotEqualKeyword"
+		class="com.ump.automate.test.service.impl.TextNotEqualKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+	
+	<bean name="tickCheckboxKeyword" class="com.ump.automate.test.service.impl.TickCheckboxKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>	
+	
+	<bean name="verifyDateStateKeyword"
+		class="com.ump.automate.test.service.impl.VerifyDateStateKeyword">
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+	
+	<bean name="verifyFieldHasValueKeyword" class="com.ump.automate.test.service.impl.VerifyFieldHasValueKeyword">
+		<property name="assertElement" ref="assertElement" />
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+	</bean>
+
+	<bean name="waitForKeyword" class="com.ump.automate.test.service.impl.WaitForKeyword">
+		<property name="driverScript" ref="driverScript" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+</beans>

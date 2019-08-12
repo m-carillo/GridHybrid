@@ -1,0 +1,26 @@
+
+WHERE TO GET PLUGIN FOR XPATH
+
+1. Firebug can be downloaded here:
+	http://toolsqa.com/selenium-webdriver/xpath-firebug-firepath/
+	NOTE: this is a plugin for firefox
+
+2. After installing 'Firebug', download the 'Firepath' plugin and install.
+
+	NOTE:	for firefox version 50 and higher,
+		http://stackoverflow.com/questions/40800173/firebug-is-not-working-with-firefox-version-50-0
+
+
+
+*Firebug is not working with Firefox version 50.0
+
+-Solve The problem by Changing Mozilla Browser Configuration Settings.
+
+1. Open A Blank Tab
+2. type about:config in address bar then press enter (click on I accept the risk!)
+3. find browser.tabs.remote.autostart
+4. select the option then click the mouse right side
+5. Turn The Option As False
+6. Close the browser for restart browser
+7. open browser again, inspect the element. I hope It Works Properly.
+

@@ -1,0 +1,37 @@
+
+                  ,--.          ,--.                
+,--.,--. ,---.  ,-|  | ,--,--.,-'  '-. ,---.  ,---. 
+|  ||  || .-. |' .-. |' ,-.  |'-.  .-'| .-. :(  .-' 
+'  ''  '| '-' '\ `-' |\ '-'  |  |  |  \   --..-'  `)
+ `----' |  |-'  `---'  `--`--'  `--'   `----'`----' 
+        `--'                                        
+
+
+*CHANGELOGS:
+
+
+update/s
+
+**May 05, 2017**
+	-fixed bug when closing the browser on mozilla firefox
+
+**May 30, 2017**
+	-screenshot working on firefox, ie and chrome
+	
+**May 30, 2017**
+	-added reason message(especially for failed methods) for class keywords: FieldNotNullKeyword, NonConsistentKeyword, TextNotEqualkeyword
+
+added method/s:
+
+**Mar 21, 2017**
+	-checkSelectOptionNotContainsValue method
+		==>checks if the dropdown option DOES NOT contain the input value
+		==>returns true if dropdown does not have the input value in the list and false otherwise
+		
+**May 05, 2017**
+for dev;
+	-ContextHandler method
+		==>used for passing the field values
+		==>this was used in solving the close browser error on mozilla firefox
+
+

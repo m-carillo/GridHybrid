@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="fieldNotNullKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="isElementDisabledKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="propertiesResource">
+    <xs:sequence>
+      <xs:element name="chromeLocationProp" type="xs:string" minOccurs="0"/>
+      <xs:element name="geckoLocationProp" type="xs:string" minOccurs="0"/>
+      <xs:element name="ieLocationProp" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="scrollIntoViewKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="countContainsTextByCssSelectorKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="platformVMFactory">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="checkContainsTextMultipleSectionByCssSelectorKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="checkSelectValueKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="clickKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="isAscendingKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="assertKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="comparePlaceholderTextKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="driverScriptImpl">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="waitForKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="countCompareTextByCssSelectorKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="hoverKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="gridBrowser">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="checkCompareTextMultipleSectionByCssSelectorKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="excelUtils">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="isElementEnabledKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="runner">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="compareTextKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="keywordClassFactory">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="propertiesRetriever">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="openBrowserKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="assertMultipleKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="countByCssSelectorKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="selectFromDropdownByVisibleTextKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="textNotEqualKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="closeBrowserKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="isUncheckedKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="inputNumberOnlyKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="selectFromDropdownByIndexKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="propertiesFileChecker">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="selectFromDropdownByVisibleNumbersOnlyKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="submitKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="compareNumbersOnlyKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="inputKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="navigateKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="hoverAndClickKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="localBrowser">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="nonExistentKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="containsTextKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="isDateInBetweenKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="isDescendingKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="propertiesFileLoader">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="screenshotsUtil">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="checkSelectOptionsKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="isCheckedKeyword">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
+

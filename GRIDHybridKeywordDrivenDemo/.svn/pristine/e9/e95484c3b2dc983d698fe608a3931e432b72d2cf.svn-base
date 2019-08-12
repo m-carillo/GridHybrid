@@ -1,0 +1,7 @@
+#website Login Page
+
+#initial
+fName_txt = html/body/div[4]/di/div[1]/form/div[2]/label
+inp_fName = .//*[@id='fname']
+slct_mos = .//*[@id='fmonth']
+slct_mos_css = #fmonth

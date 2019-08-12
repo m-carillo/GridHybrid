@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/jee 
+		http://www.springframework.org/schema/jee/spring-jee.xsd">
+
+	<context:property-placeholder location="classpath:testConfig.properties"
+		ignore-unresolvable="true" />
+
+	<!-- importing contexts -->
+	<import resource="classpath:propertiesContext.xml" />
+	<import resource="classpath:actionKeywordContext.xml" />
+
+
+	<bean name="assertElement" class="com.ump.automate.test.AssertElement">
+	</bean>
+
+	<bean name="contextHandler" class="com.ump.automate.test.util.ContextHandler">
+	</bean>
+
+	<bean name="driverScript" class="com.ump.automate.test.execution.impl.DriverScriptImpl">
+		<property name="excelUtils" ref="excelUtils" />
+		<property name="keywordClassPicker" ref="keywordClassPicker" />
+		<property name="externalPropertiesResource" ref="externalPropertiesResource" />
+	</bean>
+
+	<bean name="excelUtils" class="com.ump.automate.test.util.ExcelUtils">
+	</bean>
+
+	<bean name="fileChecker" class="com.ump.automate.test.util.FileChecker">
+	</bean>
+
+	<bean name="platformVMFactory" class="com.ump.automate.test.util.PlatformVMFactory">
+		<constructor-arg index="0" ref="externalPropertiesResource"></constructor-arg>
+	</bean>
+
+	<bean name="screenshotsUtil" class="com.ump.automate.test.util.ScreenshotsUtil">
+		<property name="driverScript" ref="driverScript" />
+	</bean>
+
+	<bean name="scriptRunner" class="com.ump.automate.test.util.ScriptRunner">
+		<property name="driverScript" ref="driverScript" />
+		<property name="propertiesRetriever" ref="propertiesRetriever" />
+		<property name="propertiesFileChecker" ref="propertiesFileChecker" />
+		<property name="excelUtils" ref="excelUtils" />
+		<property name="externalPropertiesResource" ref="externalPropertiesResource" />
+	</bean>
+
+	<bean name="seleniumDriver" class="com.ump.automate.test.browser.impl.SeleniumDriverImpl">
+	</bean>
+
+	<bean name="seleniumRunner" class="com.ump.automate.test.util.SeleniumRunner">
+		<property name="scriptRunner" ref="scriptRunner" />
+	</bean>
+
+	<!-- browser impl -->
+	<bean name="gridBrowser" class="com.ump.automate.test.browser.impl.GridBrowser">
+		<constructor-arg index="0" ref="platformVMFactory"></constructor-arg>
+		<property name="externalPropertiesResource" ref="externalPropertiesResource" />
+	</bean>
+
+	<bean name="localBrowser" class="com.ump.automate.test.browser.impl.LocalBrowser">
+		<constructor-arg index="0" ref="internalPropertiesResource"></constructor-arg>
+		<property name="contextHandler" ref="contextHandler" />
+	</bean>
+
+	<bean name="keywordClassPicker" class="com.ump.automate.test.util.KeywordClassFactory">
+		<property name="assertKeyword" ref="assertKeyword" />
+		<property name="assertMultipleKeyword" ref="assertMultipleKeyword" />
+		<property name="checkContainsTextMultipleSectionByCssSelectorKeyword"
+			ref="checkContainsTextMultipleSectionByCssSelectorKeyword" />
+		<property name="checkCompareTextMultipleSectionByCssSelectorKeyword"
+			ref="checkCompareTextMultipleSectionByCssSelectorKeyword" />
+		<property name="checkElementCompareCssClassKeyword" ref="checkElementCompareCssClassKeyword" />
+		<property name="checkElementContainsCssClassKeyword" ref="checkElementContainsCssClassKeyword" />
+		<property name="checkSelectOptionNotContainsValueKeyword"
+			ref="checkSelectOptionNotContainsValueKeyword" />
+		<property name="checkSelectOptionsKeyword" ref="checkSelectOptionsKeyword" />
+		<property name="checkSelectValueKeyword" ref="checkSelectValueKeyword" />
+		<property name="clickKeyword" ref="clickKeyword" />
+		<property name="closeBrowserKeyword" ref="closeBrowserKeyword" />
+		<property name="compareNumbersOnlyKeyword" ref="compareNumbersOnlyKeyword" />
+		<property name="comparePlaceholderTextKeyword" ref="comparePlaceholderTextKeyword" />
+		<property name="compareTextKeyword" ref="compareTextKeyword" />
+		<property name="containsTextKeyword" ref="containsTextKeyword" />
+		<property name="countByCssSelectorKeyword" ref="countByCssSelectorKeyword" />
+		<property name="countCompareTextByCssSelectorKeyword" ref="countCompareTextByCssSelectorKeyword" />
+		<property name="countContainsTextByCssSelectorKeyword" ref="countContainsTextByCssSelectorKeyword" />
+		<property name="fieldNotNullKeyword" ref="fieldNotNullKeyword" />
+		<property name="fileDownloadCheckKeyword" ref="fileDownloadCheckKeyword" />
+		<property name="hoverKeyword" ref="hoverKeyword" />
+		<property name="inputNumberOnlyKeyword" ref="inputNumberOnlyKeyword" />
+		<property name="inputKeyword" ref="inputKeyword" />
+		<property name="isAscendingKeyword" ref="isAscendingKeyword" />
+		<property name="isCheckedKeyword" ref="isCheckedKeyword" />
+		<property name="isDateInBetweenKeyword" ref="isDateInBetweenKeyword" />
+		<property name="isDescendingKeyword" ref="isDescendingKeyword" />
+		<property name="isElementDisabledKeyword" ref="isElementDisabledKeyword" />
+		<property name="isElementEnabledKeyword" ref="isElementEnabledKeyword" />
+		<property name="isElementReadOnlyKeyword" ref="isElementReadOnlyKeyword" />
+		<property name="isUncheckedKeyword" ref="isUncheckedKeyword" />
+		<property name="navigateKeyword" ref="navigateKeyword" />
+		<property name="nonExistentKeyword" ref="nonExistentKeyword" />
+		<property name="openBrowserKeyword" ref="openBrowserKeyword" />
+		<property name="selectCaseInsensitiveDropdownKeyword" ref="selectFromDropdownCaseInsensitiveKeyword" />
+		<property name="selectIndexDropdownKeyword" ref="selectFromDropdownByIndexKeyword" />
+		<property name="selectVisibleNumbersOnlyDropdownKeyword"
+			ref="selectFromDropdownByVisibleNumbersOnlyKeyword" />
+		<property name="selectVisibleTextDropdownKeyword" ref="selectFromDropdownByVisibleTextKeyword" />
+		<property name="submitKeyword" ref="submitKeyword" />
+		<property name="textNotEqualKeyword" ref="textNotEqualKeyword" />
+		<property name="waitForKeyword" ref="waitForKeyword" />
+		
+		<property name="driverScript" ref="driverScript" />
+		<property name="screenshotsUtil" ref="screenshotsUtil" />
+		<property name="seleniumDriver" ref="seleniumDriver" />
+	</bean>
+
+</beans>

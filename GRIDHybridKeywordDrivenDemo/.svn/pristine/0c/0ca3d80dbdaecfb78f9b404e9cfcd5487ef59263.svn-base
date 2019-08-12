@@ -1,0 +1,73 @@
+
+                                                                                                ,--.    
+                                            ,--.  ,--.                 ,---.,--.,--.           /  /     
+ ,---. ,--.--. ,---.  ,---.  ,---. ,--.--.,-'  '-.`--' ,---.  ,---.   /  .-'`--'|  | ,---.    /  /,---. 
+| .-. ||  .--'| .-. || .-. || .-. :|  .--''-.  .-',--.| .-. :(  .-'   |  `-,,--.|  || .-. :  /  /(  .-' 
+| '-' '|  |   ' '-' '| '-' '\   --.|  |     |  |  |  |\   --..-'  `)  |  .-'|  ||  |\   --. /  / .-'  `)
+|  |-' `--'    `---' |  |-'  `----'`--'     `--'  `--' `----'`----'   `--'  `--'`--' `----'/  /  `----' 
+`--'                 `--'                                                                 `--'          
+
+
+**object-repository-properties-file
+
+	-this properties file contain/s the list of xpath/s and css selector/s
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------	
+**navi-properties-file
+	
+	-this properties file contain/s mainly the url/s to navigate and/or the configuration needed to run test/s in virtual machine
+		eg.
+			google.url = https://www.google.com.ph
+	
+	machine.open = indicate where to run the test. (currently either through grid or local machine)
+				 - if not indicated, it will open local machine 
+		eg.
+			machine.open = grid
+	vm.nodeURL = indicate the ip of the machine to be use.
+		eg.
+			vm.nodeURL = http://xxx.xxx.xxx.xxx:5555/wd/hub
+	vm.platform = indicate the platform to be use(choose one from: winXP, winVISTA, win8, win8.1, win10, linux, mac, windows)
+		eg. 
+			vm.platform = windows
+	
+	
+
+
+	
+-------------------------------------------------------------------------------------------------------------------------------------------	
+**excel-config-properties-file
+
+	-this properties file contain the configuration needed for selenium testing jar to read the excel file
+	
+	#main excel test page configuration(the page containing the test case/s)
+	column.testCaseId = (location where the test case ID/s is/are to be read)
+					  -should be the same location of the other test sheet/s
+						
+	column.sheetTitle = (location where the name of the sheet/s to look for the test case/s is/are written	
+
+	column.runMode = (location where the keyword whether to run the test case/s or not is/are written at)
+
+	column.result = (location where the result of the test case/s will be written at)
+
+	column.screenshotDir = (location where the directory of the screenshotDir will be written at)
+
+	# **tests' sheets' page info(the page containing the test steps of each test case/s)
+	column.objectRepo = (location where the locating mechanism(such as xpaths and css selectors) is/are to be read)
+
+	column.actionKeyword = (location where the method to use is to be read)
+
+	column.dataSet = (location where data inputted is to be read)
+
+	column.testSheetResult = (location where the result/s of the test step/s is/are to be written at)
+
+	column.testSheetReason = (location where the system message about the method will be written)
+
+	#sheet name
+	sheet.testCases = (the main sheet containing the test/s case/s)
+
+	#default is FAILED & PASSED
+	keyword.fail = (the keyword to use incase the test failed)
+	keyword.pass = (the keyword to use incase the test passed)

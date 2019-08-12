@@ -1,0 +1,58 @@
+
+                              ,--.  ,--.                  ,--.            ,--.      ,---.,--.,--.      
+ ,---.,--.--. ,---.  ,--,--.,-'  '-.`--',--,--,  ,---.    |  |-. ,--,--.,-'  '-.   /  .-'`--'|  |,---. 
+| .--'|  .--'| .-. :' ,-.  |'-.  .-',--.|      \| .-. |   | .-. ' ,-.  |'-.  .-'   |  `-,,--.|  | .-. :
+\ `--.|  |   \   --.\ '-'  |  |  |  |  ||  ||  |' '-' '   | `-' \ '-'  |  |  |     |  .-'|  ||  \   --.
+ `---'`--'    `----' `--`--'  `--'  `--'`--''--'.`-  /     `---' `--`--'  `--'     `--'  `--'`--'`----'
+                                                `---'                                              
+
+1. create a .bat file
+2. enter the following
+
+		java -Dhttp.proxyHost=(your proxy host) -Dhttp.proxyPort=(your proxy port) 
+	-jar (path_to_jar_file) RUN (path_to_excel_file) 
+	(path_to_object_repository_property_file) 
+	(path_to_navigation_property_file) (path_to_excel_configuration_file)
+	
+	NOTE:	
+		*just use single space between each paths
+		*if folder path or directory has a space(path or directory),
+		command line just read the 'path' as its path...
+		better remove the spaces in folder paths(path_or_directory) 
+
+		**if you're using a version of java other than "java version 1.8";
+		locate the path of your java.exe file and add version like below example
+
+			"C:\Program Files\Java\jdk1.8.0_77\bin\java.exe"
+
+		instead of using:
+			java -Dhttp.proxyHost... 
+		
+		use:
+
+			"c:\Program Files\Java\jdk1.8.0_45\bin\java" 
+		-Dhttp.proxyHost=(your proxy host) 
+		-Dhttp.proxyPort=(your proxy port) -jar 
+		(path_to_jar_file) 
+		RUN (path_to_excel_file) 
+		(path_to_object_repository_property_file) 
+		(path_to_navigation_property_file) 
+		(path_to_excel_configuration_file)
+
+		You can also create an "environment variables" to better locate the path/directory of your files.		
+		Instead of writing the whole path, just use the environment variable like:
+		
+			%(sample test files path)%\excel file
+			
+		so your batch file will look like:
+		
+			"c:\Program Files\Java\jdk1.8.0_45\bin\java" 
+		-Dhttp.proxyHost=(your proxy host) 
+		-Dhttp.proxyPort=(your proxy port) -jar 
+		(path_to_jar_file) 
+		RUN %(sample test files path)%\excel_file 
+		%(sample test files path)%\object_repository_file
+		%(sample test files path)%\navigation_property_file
+		%(sample test files path)%\excel_configuration_file)
+		
+		

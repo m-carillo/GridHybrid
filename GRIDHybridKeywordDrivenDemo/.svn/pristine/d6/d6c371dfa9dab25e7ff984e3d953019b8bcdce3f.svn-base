@@ -1,0 +1,207 @@
+
+                                                                       ,--.  ,--.               ,--.       
+ ,---. ,---. ,--,--,--.,--,--,--. ,---. ,--,--,     ,--,--,--. ,---. ,-'  '-.|  ,---.  ,---.  ,-|  | ,---. 
+| .--'| .-. ||        ||        || .-. ||      \    |        || .-. :'-.  .-'|  .-.  || .-. |' .-. |(  .-' 
+\ `--.' '-' '|  |  |  ||  |  |  |' '-' '|  ||  |    |  |  |  |\   --.  |  |  |  | |  |' '-' '\ `-' |.-'  `)
+ `---' `---' `--`--`--'`--`--`--' `---' `--''--'    `--`--`--' `----'  `--'  `--' `--' `---'  `---' `----' 
+
+NOTE:
+	*enter input on dataSet column
+	*enter 'web element' name on page object column
+
+assert
+	*checks whether the object exist or present on the page
+	-returns true if the element is present and is visible and false otherwise
+
+assert multiple
+	*checks whether the object/s exist or present on the page
+	-returns true if the element is present and is visible and false otherwise
+	*uses css selector instead of xpath
+
+check contains text multiple section
+	*checks the retrieved text of each section retrieved if it has the input
+	*not case sensitive
+	*uses css selector instead of xpath
+	-returns true if retrieved text has the input text and false otherwise
+
+check compare text multiple section
+	*compares each of the retrieved value to that of the input
+	*not case sensitive
+	*uses css selector instead of xpath
+	- returns true if none is different and false otherwise
+
+check element compare css class
+	*compares the input to that of the element's css class
+	*uses xpath
+	*case sensitive
+	**space means another class
+		ex. for web element having 2 css class like: class = "form-body fName"
+			input: form-body fName
+	-returns true if the same and false otherwise
+
+check element contains css class
+	*checks if the element's css class has the input 
+	*uses xpath
+	*not case sensitive
+	-returns true if it contains the input and false otherwise
+
+check select option not contains value
+	*checks if the dropdown option DOES NOT contain the input value
+	-returns true if dropdown does not have the input value in the list and false otherwise
+	
+check select options
+	*compares the 'select' tag options and the input (use "', '" as separator)
+	*ex. input = bird', 'cat', 'dog', 'horse', 'cow
+		will be equal to:
+				bird, cat, dog, horse, cow
+	-returns true if the select tag options are equal to the inputs and false otherwise
+
+check select value
+	*comopares the currently selected option value to that of the input
+	-returns true if the values are the same and false otherwise
+	**case sensitive
+
+click
+	*clicks the object
+	-returns true when the element was clicked and false otherwise
+
+close browser
+	*closes the browser
+
+compare numbers only
+	*compares the number input to that of the retrieved number
+	-returns true if the value retrieved are the same and false otherwise
+	**NOTE input with other strings but will just get the numbers (eg. count123 = 123)
+
+compare placeholder text
+	*compares the placeholder value of the object and the input 
+	-returns true if the value of the placeholder is equal to the input and false otherwise
+	**not case sensitive
+
+compare text
+	*compares the text value and the input
+	-returns true if the value of the object is equal to the input and false otherwise
+	**not case sensitive
+
+contains text
+	*checks the retrieved text if it has the input
+	-returns true if retrieved text has the input text and false otherwise
+
+count
+	*counts the number of elements having the same 'CSS Selector'(instead of 'xpaths' use element's css) and compare it to the input number value
+	-returns true if input(expected retrieved count) is equal to the actual retrieved count and false otherwise
+	*uses css selector instead of xpath
+	*input format(count) 
+	**NOTE input with other strings but will just get the numbers (eg. count123 = 123)
+
+count compare text
+	*count the number of elements of the same CSS class having the same value to that of the input 
+	*uses css selector instead of xpath
+	*input format(count, value to compare)
+	*input format(value to compare, count)
+	**NOTE only use ',' or ';' to separate
+
+count contains text
+	*count the number of elements of the same CSS class containing the value of the input 
+	*uses css selector instead of xpath
+	*input format(count, value to compare)
+	*input format(value to compare, count)
+	**NOTE only use ',' or ';' to separate
+
+file download check
+	*checks if a file exist in the given input file path
+	-returns true if file exist and false otherwise
+
+field not null
+	*checks if the field has value(as in text value)
+	-returns true if the field has no value and false otherwise
+
+hover
+	*use when you need to hover over something(just like in manually doing it) to see objects that are hidden
+	-returns true if it hovers over something and false otherwise
+
+input
+	*use when you need to enter a text over an object.
+	-returns true if text was entered properly and false otherwise
+
+input number only
+	*use when you need to enter a number text over an object.
+	-returns true if text was entered properly and false otherwise
+
+is ascending
+	*checks the order of the list if it is in ASCENDING
+	*uses css selector instead of xpath
+	-returns true if list is in ascending order and false otherwise
+		
+is checked
+	*checks whether the checkbox was checked
+	-returns true if the object was checked and false otherwise
+
+is date in between ('minDate'-'maxDate'): mm/dd/yyyy - mm/dd/yyyy 
+	*checks if the dates to be retrieved are between the input dates
+	*uses css selector instead of xpath
+	-returns true if retrieved dates are between the input dates and false otherwise
+	**seperators such as (,/-\) are all valid
+
+is descending
+	*checks the order of the list if it is in DESCENDING
+	*uses css selector instead of xpath
+	-returns true if list is in descending order and false otherwise
+
+is element disabled
+	*checks if the element is disabled
+	-returns true if element is disabled and false otherwise
+	
+is element enabled
+	*checks if the element is enabled
+	-returns true if element is enabled and false otherwise
+
+is element read only
+	*checks if the element is read only
+	-returns true if element is enabled and false otherwise
+
+is unchecked
+	*checks whether the checkbox was unchecked
+	-returns true if the object was unchecked and false otherwise
+
+navigate
+	*use when you need to proceed to a website
+	-returns true if navigated properly and false otherwise
+
+non existent
+	*checks if the object does not exist
+	-returns true if the object does not exist and false otherwise
+
+open browser
+	*opens a browser
+	-returns true if successfully opened a browser and false otherwise
+
+select dropdown case insensitive
+	*picks through 'select' tag by text options
+	**not case sensitive
+	-returns true if succesfully selected an option and false otherwise
+
+select from dropdown by index
+	*picks through 'select' tag options by index
+	-returns true if succesfully selected an option and false otherwise
+	**NOTE input with other strings but will just get the numbers (eg. count123 = 123)
+
+select from dropdown by visible numbers only
+	*picks through 'select' tag by text options(case sensitive)
+	-returns true if succesfully selected an option and false otherwise
+	**NOTE input with other strings but will just get the numbers (eg. count123 = 123)
+
+select from dropdown by visible text
+	*picks through 'select' tag by text options(case sensitive)
+	-returns true if succesfully selected an option and false otherwise
+
+text not equal
+	*checks if the input is not equal to the object's text
+	**not case sensitive
+	-returns true if text is not equal to that of the input and false otherwise
+
+wait for
+	*pause for a limited time(in seconds) 
+	-returns true if paused successfully and false otherwise
+	**NOTE input with other strings but will just get the numbers (eg. count123 = 123)
+

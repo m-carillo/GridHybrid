@@ -1,0 +1,18 @@
+
+                                                                   
+                  ,--.       	                ,--.                 
+,--,--,  ,---.  ,-|  | ,---. 	 ,---.  ,---. ,-'  '-.,--.,--. ,---. 
+|      \| .-. |' .-. || .-. :	(  .-' | .-. :'-.  .-'|  ||  || .-. |
+|  ||  |' '-' '\ `-' |\   --.	.-'  `)\   --.  |  |  '  ''  '| '-' '
+`--''--' `---'  `---'  `----'	`----'  `----'  `--'   `----' |  |-' 
+                             	                              `--'   
+
+Setting up the node environment for Selenium Grid Test
+
+
+1. download the (selenium test)framework zip file.
+
+2. extract the downloaded zip file.
+
+3. from the resources folder, copy the drivers and save it in folder directory where the selenium-standalone-server jar file is located.
+

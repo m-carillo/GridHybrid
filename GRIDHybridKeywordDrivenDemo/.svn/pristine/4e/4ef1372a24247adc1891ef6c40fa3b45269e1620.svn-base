@@ -1,0 +1,22 @@
+#url and vm config
+
+#state which machine to use
+#opens local by default
+#machine.open = grid
+
+#***vm config***
+vm.nodeURL = http://xxx.xxx.xxx.xxx:5555/wd/hub
+vm.platform = windows
+#vm.platform = winXP
+#vm.platform = winVISTA
+#vm.platform = win8
+#vm.platform = win8.1
+#vm.platform = win10
+#vm.platform = linux
+#vm.platform = mac
+
+#***URL's to use***
+#google.url = https://www.google.com.ph/
+#lets.dev = http://www.lets-develop.com/html5-html-css-css3-php-wordpress-jquery-javascript-photoshop-illustrator-flash-tutorial/css-css3-css-3-style-styling/create-bevel-emboss-css-3-d-effect/
+
+bm.url = http://bmonline.ph/
