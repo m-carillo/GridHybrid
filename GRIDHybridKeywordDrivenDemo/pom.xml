@@ -78,7 +78,7 @@
 	</build>
 	<properties>
 		<spring.version>4.3.3.RELEASE</spring.version>
-		<apache.poi.version>3.14</apache.poi.version>
+		<apache.poi.version>4.1.1</apache.poi.version>
 		<selenium.version>3.0.0-beta2</selenium.version>
 		<!-- current not working with geckodriver event with the latest 0.16 -->
 		<!-- <selenium.version>3.4.0</selenium.version> -->
